@@ -13,23 +13,24 @@ public class CountryService {
 	
 	@Autowired
 	private CountryRepository countryRepository;
-	
-	//Get All Countrys
+
+
+	//Ambil data semua yang ada di list
 	public List<Country> findAll(){
 		return countryRepository.findAll();
 	}	
 	
-	//Get Country By Id
+	//Ambil Data By Id
 	public Optional<Country> findById(int id) {
 		return countryRepository.findById(id);
 	}	
 	
-	//Delete Country
+	//Delete Data By Id
 	public void delete(int id) {
 		countryRepository.deleteById(id);
 	}
 	
-	//Update Country
+	//Update Data
 	public void save( Country country) {
 		countryRepository.save(country);
 	}
